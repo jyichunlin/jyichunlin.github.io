@@ -1401,9 +1401,22 @@ Portfolio with right sidebar
 /*****************************
 Portfolio Details
 *****************************/
+#portfolio-img {
+  padding: 50px 0;
+}
+#portfolio-img img {
+  max-height: 800px;
+  margin: auto;
+  /* border: solid #ddd 1px;
+  box-shadow: 3px 5px 12px #ccc; */
+}
+
+#portfolio-sideimg {
+  margin: -50px 0;
+}
 
 #portfolio-information{
-  padding: 30px 0;
+  padding: 50px 0;
   background-color: #fbfafa;
 }
 
@@ -2605,16 +2618,9 @@ span.stButton_gradient,
 
 
 /////////////////////////////////////////
-.bg-gray-lighter {
-  background-color: #fbfafa;
-  padding: 500px;
-}
-#portfolio-img {
-  padding: 30px 0;
-}
-.float-left {
-  float: left;
-}
-.float-right {
-  float: right;
+
+
+
+.align-right {
+  text-align: right;
 }
