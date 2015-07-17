@@ -18,12 +18,15 @@
     font-size: 16px;
     line-height: 22px;
     color: #000;
+    padding-top: 90px;
   }
 
   html {
     height: 100%;
     overflow-x: hidden;
   }
+
+
 
 
   a{
@@ -168,15 +171,17 @@
 
 
 #header{
-margin: 0;
-padding: 0;
+  margin: 0;
+  padding: 0;
+
 }
+
 #header .navbar-inverse {
 
-  padding: 10px 0 20px 0;
-  border-bottom: solid 1px #ccc;
+  margin-top: 0;
 }
 #header .navbar-inverse .container{
+  padding: 10px 10px 20px 10px;
   position: relative;
 
 }
@@ -215,10 +220,13 @@ padding: 0;
   margin-top: 20px;
   border-radius: 4px;
 }
+.social-icons .nav-pills{
+  display:inline-block;
+
+}
 
 .social-icons ul li{
   padding: 0 10px;
-
 }
 
 .social-icons ul li:last-child{
@@ -227,7 +235,7 @@ padding: 0;
 }
 
 .social-icons ul li a{
-  font-size: 18px;
+  font-size: 20px;
   color: #d3d3d3;
   padding: 0;
 }
@@ -499,7 +507,7 @@ ul.sub-menu {
 }
 
 .copyright-text{
-  margin-top: 70px;
+  margin-top: 30px;
 }
 
 /*************************
@@ -507,8 +515,12 @@ ul.sub-menu {
 **************************/
 
 #home-slider {
-  background: url(../images/home/slider-lbp.jpg) center repeat-x;
+  background-image: url(../images/home/slider-lbp.jpg);
   position: relative;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed !important;
+  background-repeat: none;
 }
 
 #home-slider .main-slider {
@@ -728,7 +740,7 @@ ul.sub-menu {
 }
 
 #clients{
-  padding-bottom: 45px;
+  padding: 60px 0;
 }
 
 .clients {
@@ -746,14 +758,26 @@ ul.sub-menu {
 
 #home-text{
   padding: 80px 0;
+  line-height: 36px;
 }
 #home-text p{
-  font-size: 32px;
+  font-size: 28px;
+}
+#demo-btn {
+  margin-top: -200px;
 }
 
 #close-contact {
   font-size: 24px;
   cursor: pointer;
+}
+#view-projects {
+  padding: 60px 0;
+  background-image: url(../images/home/feature4.jpg);
+  background-size: cover;
+  background-attachment: fixed !important;
+  background-repeat: none;
+  color: #fff;
 }
 
 /*************************
@@ -773,10 +797,14 @@ ul.sub-menu {
   margin-top: 80px;
 }
 
-#company-information .padding-top{
-  padding-top: 105px;
+#company-information {
+  padding: 100px 0;
 
 }
+#about-company {
+  padding: 300px 0;
+}
+
 
 .single-service img {
   height: 85px;
@@ -1477,6 +1505,27 @@ Portfolio Details
   padding: 13px 45px;
 }
 
+#portfolio-img .preloader {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: #fafafa;
+  text-align: center;
+}
+
+#portfolio-img .preloader > i {
+  font-size: 48px;
+  height: 48px;
+  line-height: 48px;
+  color: #dbb075;
+  position: absolute;
+  left: 50%;
+  margin-left: -24px;
+  top: 50%;
+  margin-top: -24px;
+}
 
 /*****************************
 Blog Default
@@ -1922,6 +1971,15 @@ span.stButton_gradient,
 /****************************
 ********* Contact Us*********
 *****************************/
+.box-fixed *,
+.box-fixed *:before,
+.box-fixed *:after {
+  -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+
 #contact{
 /*  height:100vh;*/
 }
@@ -1929,13 +1987,14 @@ span.stButton_gradient,
 #map-section {
   margin-top: 50px;
   margin-bottom: 50px;
-  position: relative;
+  position: relatives;
 }
 
 #gmap {
   margin-bottom: 30px;
   height: 240px;
 }
+
 
 .get-in-touch img {
   margin-top: 35px;

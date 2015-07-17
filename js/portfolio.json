@@ -1,0 +1,87 @@
+{
+  "portfolio": {
+    "artwork": [
+      {
+        "title": "Human Pancreas and Duodenum",
+        "src": "pancreas",
+        "url":"https://www.youtube.com/watch?v=La6PCKj9UNo",
+        "type": "illustration",
+        "subtitle": "Textbook illustration",
+        "medium": "carbondust",
+        "audience": "Students",
+        "description": "Grant’s museum at University of Toronto houses many original dissections that were illustrated in Grant’s Atlas of Anatomy.\nThis illustration is based on a dissected specimen of digested tract mounted in a glass container in the museum. It focuses on the complex anatomical structures of pancreas, duodenum, jejunum as well as the surrounding vessels. I experimented with the carbon dust technique, trying to depict various tissue textures in order to clearly show the different structures."
+      },
+      {
+        "title": "Human pelvic bone",
+        "src": "pelvis",
+        "url":"https://www.youtube.com/watch?v=La6PCKj9UNo",
+        "type": "illustration",
+        "subtitle": "Textbook illustration",
+        "medium": "pen and ink",
+        "audience": "Students",
+        "description": "The pelvic bones or hip bones come in pairs. They connect to the sacrum to form the pelvis, protecting the reproductive organs and connecting the torso to the legs. This illustration is based on a left human pelvic bone specimen. It depicts the important bony landmarks on the pelvic bone where various muscles of the abdomen, back and legs attach. I use different line weight and mark making to portray the distinct shape and textures of the bone."
+      },
+      {
+        "title": "Myelomeningocele",
+        "src": "myelomeningocele",
+        "url":"https://www.youtube.com/watch?v=La6PCKj9UNo",
+        "type": "illustration",
+        "subtitle": "Textbook illustration",
+        "medium": "watercolor, pen and ink",
+        "audience": "Students",
+        "description": "The neural tube, a precursor to the central nervous system in human embryo, close during the fourth week of embryo development.  When it does not close properly, a birth defect called spina bifida occurs. Myelomeningocele is the most servere form of spina bifida occurring in about one in every thousand newborns. Babies are born with fluid sacs, where their posterior vertebral arches are absent and the spinal cord is exposed. This piece illustrates the structural differences between the myelomeningocele newborn spine and the normal newborn spine. "
+      },
+      {
+        "title": "Vistibular Schwannoma",
+        "src": "schwannoma",
+        "url":"https://www.youtube.com/watch?v=La6PCKj9UNo",
+        "type": "illustration",
+        "subtitle": "Textbook illustration",
+        "medium": "Adobe Photoshop and Illustrator",
+        "audience": "Students",
+        "description": "This piece aims to explain the complex relationship between the pathology of vestibular schwannoma and its clinical symptoms. The stages of tumor growth are corresponded with affected nerves and symptoms. By depicting these three concepts together, students can easily and realistic rendering of cranial nerves and ear anatomy, respectively, creates visual contrast and enhances the focus on cranial nerves. Analogous color is used for the ear structure, and more contrast and brighter color are used to highlight cranial nerves. Color codes of cranial nerves are maintained throughout the piece to help students cross-reference the structures."
+      },
+      {
+        "title": "Innate and Adaptive Cell Function during T cell Transfer Colitis",
+        "src": "tcell",
+        "url":"https://www.youtube.com/watch?v=La6PCKj9UNo",
+        "type": "illustration",
+        "subtitle": "Textbook illustration",
+        "medium": "Adobe Illustrator",
+        "audience": "Students",
+        "description": "This illustration shows recent research on the effect of regulatory T cells and iNKT cells on inflammatory bowel disease. Three experimental conditions are laid out side by side so the inflammation severity, cell density and cell responses can be easily compared. The different structure levels are organized from top to bottom to orient the reader. The color and the placement of cells are designed to show the dynamic environment in the colon."
+      },
+      {
+        "title": "IMS Magazine",
+        "src": "ims",
+        "url":"https://www.youtube.com/watch?v=La6PCKj9UNo",
+        "type": "illustration",
+        "subtitle": "Magazine",
+        "medium": "Adobe Indesign and Maxon Cinema 4D",
+        "audience": "Students and faculty",
+        "description": "IMS magazine is a student-led publication that features the cutting-edge health science research by the faculty and students from the Institute of Medical Science (IMS) at University of Toronto. For this issue, my classmates and I collaborate with the editor team, fellow IMS graduate students to produce a brand new style and layout for the magazine. \nI also create a full-page illustration, which visualizes the dynamic environment in the bloodstream, to accompany this article about the innovative imaging technology for the stroke patient. "
+      },
+      {
+        "title": "Chronic Low Back Pain",
+        "src": "lbp",
+        "url":"https://www.youtube.com/watch?v=La6PCKj9UNo",
+        "type": "video",
+        "subtitle": "Patient education animation",
+        "medium": "Autodesk Maya, Adobe After Effects and Photoshop",
+        "audience": "General public",
+        "description": "Chronic low back pain is a common health problem worldwide that has a serious impact on an individual’s quality of life. This animation focuses on the concept of multidisciplinary approaches and offers a broad perspective on the causes and treatments of chronic low back pain. It aims to unravel the mystery of chronic low back pain and help patients understand some of the most difficult topics surrounding this health problem, such as complex anatomical structures of the lower back, the pain pathway, and the underlying mechanisms of treatments. In addition, to tailor toward the general public audiences, the animation uses engaging tones, warm and saturated color scheme and easily comprehensible images which incorporate realistic and schematic rendering styles."
+      },
+      {
+        "title": "Pocus Lung Ultrasound",
+        "src": "pocus",
+        "url":"http://pie.med.utoronto.ca/POCUS/POCUS_content/lungUS.html",
+        "type": "interactive",
+        "subtitle": "Interactive application for medical teaching",
+        "medium": "Cinema 4D, Adobe After Effects, Adobe Flash and Actionscript 3",
+        "audience": "Medical professions",
+        "description": "Lung ultrasound has shown to be an amazing tool to detect various pathology. It has the advantage of fast and non-invasive, so learning for every primary care physician is crucial. However, it’s hard to learn and fairly new that not many resources. "
+      }
+
+    ]
+  }
+}

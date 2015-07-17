@@ -111,3 +111,9 @@ jQuery(function($) {'use strict';
 	}
 
 });
+
+//close contact button
+$('#close-contact').on('click', function(){
+	//$(".btn-navbar").click(); //bootstrap 2.x
+	$("#contact-collapse").click() //bootstrap 3.x by Richard
+});

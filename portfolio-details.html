@@ -11,8 +11,9 @@
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/lightbox.css" rel="stylesheet">
     <link href="css/animate.min.css" rel="stylesheet">
-	<link href="css/main.css" rel="stylesheet">
-	<link href="css/responsive.css" rel="stylesheet">
+    <link href="css/magnific-popup.css" rel="stylesheet">
+	  <link href="css/main.css" rel="stylesheet">
+	  <link href="css/responsive.css" rel="stylesheet">
 
     <!--[if lt IE 9]>
 	    <script src="js/html5shiv.js"></script>
@@ -23,26 +24,71 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+
+
+
 </head><!--/head-->
 
-<body>
-	<header id="header">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 overflow">
-                   <div class="social-icons pull-right">
-                        <ul class="nav nav-pills">
-                            <li><a href="https://www.behance.net/jyichun" target="_blank"><i class="fa fa-behance"></i></a></li>
-                            <li><a href="https://ca.linkedin.com/in/jyichunlin" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="https://vimeo.com/user24756550" target="_blank"><i class="fa fa-vimeo-square"></i></a></li>
-                            <li><a href="mailto:jyichun.lin@gmail.com" target="_blank"><i class="fa fa-envelope-o"></i></a></li>
-                        </ul>
+<body >
+  <header id="header" >
+
+        <div class="navbar navbar-inverse navbar-fixed-top" role="banner">
+
+          <!--Contact-->
+          <div id="contact" class="well collapse ">
+              <div class="container">
+                  <div class="row">
+                    <div class="col-sm-12">
+                        <span id="close-contact" class="glyphicon glyphicon-remove pull-right" aria-hidden="true"></span>
                     </div>
-                </div>
-             </div>
-        </div>
-        <div class="navbar navbar-inverse" role="banner">
-            <div class="container">
+                      <div class="col-md-4 col-sm-6 ">
+                        <div id="gmap" ></div>
+                      </div>
+                      <div class="col-md-3 col-sm-6">
+                          <div class="contact-info bottom">
+                              <h2>Contacts</h2>
+                              <address>
+                              <p><i class="fa fa-envelope-o"></i> E-mail: <br/>jyichun.lin@gmail.com</a> </p>
+
+                              <p><i class="fa fa-map-marker"></i> Address: <br/>Toronto, ON, Canada</p>
+                              </address>
+
+                              <ul class="nav nav-pills">
+                                  <li><a href="https://www.behance.net/jyichun" target="_blank"><i class="fa fa-behance"></i></a></li>
+                                  <li><a href="https://ca.linkedin.com/in/jyichunlin" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                                  <li><a href="https://vimeo.com/user24756550" target="_blank"><i class="fa fa-vimeo-square"></i></a></li>
+                              </ul>
+
+                          </div>
+                      </div>
+                      <div class="col-md-4 col-sm-12">
+                          <div class="contact-form bottom">
+                              <h2>Send a message</h2>
+                              <form id="main-contact-form" name="contact-form" method="post" action="sendemail.php">
+                                  <div class="form-group">
+                                      <input type="text" name="name" class="form-control" required="required" placeholder="Name">
+                                  </div>
+                                  <div class="form-group">
+                                      <input type="email" name="email" class="form-control" required="required" placeholder="Email Id">
+                                  </div>
+                                  <div class="form-group">
+                                      <textarea name="message" id="message" required="required" class="form-control" rows="8" placeholder="Your text here"></textarea>
+                                  </div>
+                                  <div class="form-group">
+                                      <input type="submit" name="submit" class="btn btn-submit" value="Submit">
+                                  </div>
+                              </form>
+                          </div>
+                      </div>
+
+
+                  </div>
+              </div>
+          </div>
+          <!--/#contact-->
+
+          <div class="container">
+            <div class="row">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="sr-only">Toggle navigation</span>
@@ -59,15 +105,16 @@
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="aboutus.html">About</a></li>
+                        <li><a href="about.html">About</a></li>
                         <li class="active"><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="#footer">Contact</a></li>
+                        <li><a id="contact-collapse" data-toggle="collapse" href="#contact" aria-expanded="false" aria-controls="contact">Contact</a></li>
 
                     </ul>
                 </div>
 
             </div>
         </div>
+
     </header>
     <!--/#header-->
 
@@ -82,8 +129,8 @@
                         </div>
                         <div class="col-sm-4">
                             <div class="row">
-                              <div class="col-xs-6"><a href="#"><i class="fa fa-angle-left"></i> Previous</a></div>
-                              <div class="col-xs-6 align-right"><a href="#">Next <i class="fa fa-angle-right"></i></a></div>
+                              <div class="col-xs-6"><a id="artwork-prev"><i class="fa fa-angle-left"></i> Previous</a></div>
+                              <div class="col-xs-6 align-right"><a id="artwork-next">Next <i class="fa fa-angle-right"></i></a></div>
                             </div>
                         </div>
                     </div>
@@ -98,9 +145,17 @@
       <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <img src="images/portfolio-details/tcell.jpg" class="img-responsive"  alt="">
+                <img id="portfolio-mainImg"  class="img-responsive wow fadeIn"  alt="">
+            </div>
+            <div id="videoBtn" class="col-sm-12">
+              <a class="popup-youtube">PLAY VIDEO</a>
+            </div>
+            <div id="projectUrl" class="col-sm-12">
+              <a target="_blank">LAUNCH PROJECT</a>
             </div>
         </div>
+
+        <div class="preloader"><i class="fa fa-cog fa-spin"></i></div>
       </div>
     </section>
 
@@ -111,33 +166,29 @@
               <div class="row">
                 <div class="col-sm-8 col-lg-6 col-lg-offset-1">
                     <div class="project-name overflow">
-                        <h2 class="bold">Human Pancreas and Duodenum</h2>
-                        <h4>Text book Illustration</h4>
+                        <h2 id="artwork-title" class="bold"></h2>
+                        <h4 id="artwork-subtitle"></h4>
 
                     </div>
-                    <div class="project-info overflow">
-
-                        <p>Grant’s museum at University of Toronto houses many original dissections that were illustrated in Grant’s Atlas of Anatomy.</p>
-                        <p>This illustration is based on a dissected specimen of digested tract mounted in a glass container in the museum. It focuses on the complex anatomical structures of pancreas, duodenum, jejunum as well as the surrounding vessels. I experimented with the carbon dust technique, trying to depict various tissue textures in order to clearly show the different structures.</p>
-
+                    <div id="artwork-description" class="project-info overflow">
                     </div>
                     <div class="row">
                     <div class="col-sm-6 skills overflow">
                         <h3>Medium:</h3>
                         <ul class="nav navbar-nav navbar-default">
-                            <li><a href="#"><i class="fa fa-check-square"></i>Carbondust</a></li>
+                            <li><a href="#"><i class="fa fa-check-square"></i><span id="artwork-medium"></span></a></li>
                         </ul>
                     </div>
                     <div class="col-sm-6  client overflow">
                         <h3>Audience:</h3>
                         <ul class="nav navbar-nav navbar-default">
-                            <li><a href="#"><i class="fa fa-bolt"></i>Students</a></li>
+                            <li><a href="#"><i class="fa fa-bolt"></i><span id="artwork-audience"></span></a></li>
                         </ul>
                     </div>
                   </div>
                 </div>
                 <div class="col-sm-4 col-lg-4 col-lg-offset-1 hidden-xs">
-                    <img id="portfolio-sideimg" src="images/portfolio-details/tcell-d01.jpg"   alt="">
+                    <img id="portfolio-sideimg"  class=" wow fadeIn" alt="">
                 </div>
             </div>
         </div>
@@ -147,60 +198,33 @@
 
 
 
-    <footer id="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 text-center bottom-separator">
-                    <img src="images/home/under.png" class="img-responsive inline" alt="">
-                </div>
-                <div class="col-md-4 col-sm-6">
-                  <div id="gmap"></div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="contact-info bottom">
-                        <h2>Contacts</h2>
-                        <address>
-                        <p><i class="fa fa-envelope-o"></i> E-mail: <br/>jyichun.lin@gmail.com</a> </p>
+     <footer id="footer" >
+         <div class="container">
+             <div class="row">
+                 <div class="col-sm-12 text-center bottom-separator">
+                     <img src="images/home/under.png" class="img-responsive inline" alt="">
+                 </div>
 
-                        <p><i class="fa fa-map-marker"></i> Address: <br/>Toronto, ON, Canada</p>
-                        </address>
+                 <div class="col-sm-12">
+                     <div class="social-icons text-center" >
+                       <ul class="nav nav-pills">
+                             <li><a href="https://www.behance.net/jyichun" target="_blank"><i class="fa fa-behance"></i></a></li>
+                             <li><a href="https://ca.linkedin.com/in/jyichunlin" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                             <li><a href="https://vimeo.com/user24756550" target="_blank"><i class="fa fa-vimeo-square"></i></a></li>
+                             <li><a href="mailto:jyichun.lin@gmail.com" target="_blank"><i class="fa fa-envelope-o"></i></a></li>
+                       </ul>
+                     </div>
+                 </div>
 
-                        <ul class="nav nav-pills">
-                            <li><a href="https://www.behance.net/jyichun" target="_blank"><i class="fa fa-behance"></i></a></li>
-                            <li><a href="https://ca.linkedin.com/in/jyichunlin" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="https://vimeo.com/user24756550" target="_blank"><i class="fa fa-vimeo-square"></i></a></li>
-                        </ul>
-
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-12">
-                    <div class="contact-form bottom">
-                        <h2>Send a message</h2>
-                        <form id="main-contact-form" name="contact-form" method="post" action="sendemail.php">
-                            <div class="form-group">
-                                <input type="text" name="name" class="form-control" required="required" placeholder="Name">
-                            </div>
-                            <div class="form-group">
-                                <input type="email" name="email" class="form-control" required="required" placeholder="Email Id">
-                            </div>
-                            <div class="form-group">
-                                <textarea name="message" id="message" required="required" class="form-control" rows="8" placeholder="Your text here"></textarea>
-                            </div>
-                            <div class="form-group">
-                                <input type="submit" name="submit" class="btn btn-submit" value="Submit">
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-sm-12">
-                    <div class="copyright-text text-center">
-                        <p>&copy; Jean YiChun Lin 2014-2015. All Rights Reserved.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!--/#footer-->
+                 <div class="col-sm-12">
+                     <div class="copyright-text text-center">
+                         <p>&copy; Jean YiChun Lin 2014-2015. All Rights Reserved.</p>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </footer>
+     <!--/#footer-->
 
 
     <script type="text/javascript" src="js/jquery.js"></script>
@@ -209,6 +233,97 @@
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
     <script type="text/javascript" src="js/gmaps.js"></script>
     <script type="text/javascript" src="js/wow.min.js"></script>
+    <script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
+
+    <script>
+/*    $( document ).ready(function() {
+      var urlString = window.location.search.substring(1);
+      //alert(urlString);
+
+       $('#portfolio-mainImg').attr('src',"images/portfolio-details/"+urlString+".jpg")
+       $('#portfolio-sideimg').attr('src',"images/portfolio-details/"+urlString+"-d01.jpg")
+    });
+*/
+    $(document).ready(function () {
+    	$.ajax({
+            type: 'GET',
+            url: 'js/portfolio.json',
+            dataType: 'json',
+            success: jsonParser
+        });
+      $('#videoBtn').css("display", "none");
+      $('#projectUrl').css("display", "none");
+
+      $('.popup-youtube').magnificPopup({
+        		disableOn: 700,
+        		type: 'iframe',
+        		mainClass: 'mfp-fade',
+        		removalDelay: 160,
+        		preloader: false,
+
+        		fixedContentPos: false
+      });
+    });
+
+    function jsonParser(json) {
+        //$('#preloader').fadeOut();
+
+    	$.getJSON('js/portfolio.json', function(data){
+        //console.log(data.portfolio);
+    		$.each(data.portfolio.artwork, function(k,v){
+    			if(v.src==window.location.search.substring(1)){
+            var arrayLength = data.portfolio.artwork.length;
+            var title = v.title;
+            var imgSrc = v.src;
+            var type = v.type;
+            var subtitle = v.subtitle;
+            var medium = v.medium;
+            var audience = v.audience;
+            var description = v.description;
+            var linkUrl = v.url;
+            var prevUrl;
+            var nextUrl;
+            console.log(k);
+            if (type == "video") {
+              $('#videoBtn').css('display', 'block');
+              $('#videoBtn a').attr('href',linkUrl);
+            }
+            if (type == "interactive") {
+              $('#projectUrl').css('display', 'block');
+              $('#projectUrl a').attr('href',linkUrl);
+            }
+
+            if (k>0){
+              prevUrl = data.portfolio.artwork[k-1].src;
+            }
+            else{
+              prevUrl = data.portfolio.artwork[arrayLength-1].src;
+            }
+
+            if(k<arrayLength-1){
+              nextUrl = data.portfolio.artwork[k+1].src;
+            }
+            else {
+              nextUrl = data.portfolio.artwork[0].src;
+            }
+
+            description = description.replace(/\n/g,"<p></p>");
+
+
+            $('#portfolio-mainImg').attr('src',"images/portfolio-details/"+imgSrc+".jpg");
+            $('#portfolio-sideimg').attr('src',"images/portfolio-details/"+imgSrc+"-d01.jpg");
+            $('#artwork-title').html(title);
+            $('#artwork-subtitle').html(subtitle);
+            $('#artwork-medium').html(medium);
+            $('#artwork-audience').html(audience);
+            $('#artwork-description').html("<p>" + description + "</p>");
+            $('#artwork-prev').attr('href','portfolio-details.html?'+prevUrl);
+            $('#artwork-next').attr('href','portfolio-details.html?'+nextUrl);
+          }
+    		});
+    	});
+    }
+    </script>
 </body>
 </html>
