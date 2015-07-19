@@ -17,7 +17,7 @@
     font-weight: 300;
     font-size: 16px;
     line-height: 22px;
-    color: #000;
+    color: #535252;
     padding-top: 90px;
   }
 
@@ -66,12 +66,16 @@
   }
 
   h2{
-    font-size: 24px;
+    font-size: 32px;
     color: #686868;
+    padding: 8px 0;
   }
 
   h3{
     font-size: 18px;
+  }
+  h4{
+    color: #A2A2A2;
   }
 
   .overflow{
@@ -2046,7 +2050,9 @@ span.stButton_gradient,
   padding-left: 40px;
 }
 
-
+#contact .nav-pills {
+  font-size: 28px;
+}
 /****************************
 ****** Price-table CSS*******
 *****************************/
