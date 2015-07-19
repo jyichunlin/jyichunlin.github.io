@@ -690,6 +690,11 @@ ul.sub-menu {
 .single-service{
   overflow: hidden;
   display: block;
+
+}
+.single-service i{
+  font-size: 32px;
+  
 }
 
 .single-service img {
