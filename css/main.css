@@ -28,7 +28,6 @@
 
 
 
-
   a{
     color:#a5732a;
   }
@@ -62,7 +61,8 @@
   }
 
   h1{
-    color: #686868;
+    font-size: 36px;
+    color: #363535;
   }
 
   h2{
@@ -182,14 +182,16 @@
 
 #header .navbar-inverse {
 
-  margin-top: 0;
+  margin: 0;
 }
 #header .navbar-inverse .container{
   padding: 10px 10px 20px 10px;
   position: relative;
 
 }
-
+#main-menu {
+  border-bottom: solid 1px #ccc;
+}
 .search{
   position: absolute;
   top: 20px;
@@ -266,8 +268,9 @@
 }
 
 #header .navbar-brand h1{
-  padding: 0;
+  padding: 10px;
   margin: 0;
+  font-size: 40px;
 }
 
 #header .navbar-nav.navbar-right >li:last-child{
@@ -746,6 +749,9 @@ ul.sub-menu {
 
 .single-features h2{
   margin-bottom: 15px;
+}
+.single-features p{
+  font-size: 18px;
 }
 
 #clients{

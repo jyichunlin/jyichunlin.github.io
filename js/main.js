@@ -120,3 +120,88 @@ $('#close-contact').on('click', function(){
 $("#contact-collapse").on('click', function(){
 	 $(".navbar-collapse").collapse('hide');
 });
+$('#contact-btn').on('click', function(){
+	$("#contact-collapse").click();
+
+});
+
+/////////portfolio////////////////
+$(document).ready(function () {
+	$.ajax({
+				type: 'GET',
+				url: 'js/portfolio.json',
+				dataType: 'json',
+				success: jsonParser
+		});
+	$('#videoBtn').css("display", "none");
+	$('#projectUrl').css("display", "none");
+
+	$('.popup-youtube').magnificPopup({
+				disableOn: 700,
+				type: 'iframe',
+				mainClass: 'mfp-fade',
+				removalDelay: 160,
+				preloader: false,
+
+				fixedContentPos: false
+	});
+});
+
+function jsonParser(json) {
+		//$('#preloader').fadeOut();
+
+	$.getJSON('js/portfolio.json', function(data){
+		//console.log(data.portfolio);
+		$.each(data.portfolio.artwork, function(k,v){
+			if(v.src==window.location.search.substring(1)){
+				var arrayLength = data.portfolio.artwork.length;
+				var title = v.title;
+				var imgSrc = v.src;
+				var type = v.type;
+				var subtitle = v.subtitle;
+				var medium = v.medium;
+				var audience = v.audience;
+				var description = v.description;
+				var linkUrl = v.url;
+				var prevUrl;
+				var nextUrl;
+				console.log(k);
+				if (type == "video") {
+					$('#videoBtn').css('display', 'block');
+					$('#videoBtn a').attr('href',linkUrl);
+				}
+				if (type == "interactive") {
+					$('#projectUrl').css('display', 'block');
+					$('#projectUrl a').attr('href',linkUrl);
+				}
+
+				if (k>0){
+					prevUrl = data.portfolio.artwork[k-1].src;
+				}
+				else{
+					prevUrl = data.portfolio.artwork[arrayLength-1].src;
+				}
+
+				if(k<arrayLength-1){
+					nextUrl = data.portfolio.artwork[k+1].src;
+				}
+				else {
+					nextUrl = data.portfolio.artwork[0].src;
+				}
+
+				description = description.replace(/\n/g,"<p></p>");
+
+
+				$('#portfolio-mainImg').attr('src',"images/portfolio-details/"+imgSrc+".jpg");
+				$('#portfolio-sideimg').attr('src',"images/portfolio-details/"+imgSrc+"-d01.jpg");
+				$('#artwork-title').html(title);
+				$('#artwork-subtitle').html(subtitle);
+				$('#artwork-medium').html(medium);
+				$('#artwork-audience').html(audience);
+				$('#artwork-description').html("<p>" + description + "</p>");
+				$('#artwork-prev').attr('href','portfolio-details.html?'+prevUrl);
+				$('#artwork-next').attr('href','portfolio-details.html?'+nextUrl);
+			}
+		});
+	});
+}
